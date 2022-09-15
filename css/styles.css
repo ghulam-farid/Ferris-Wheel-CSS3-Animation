@@ -1,101 +1,168 @@
-*, *:after, *:before{
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
-html{
-    box-sizing: border-box;
-    font-size: 62.5%;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
-.wheel{
-    border: 2px solid black;
-    border-radius: 50%;
-    width: 55vw;
-    height: 55vw;
-    max-width: 50rem;
-    max-height: 50rem;
-    position: absolute;
-    top: 5%;
-    left: calc((100% - 55vw)/2);
-    transition: wheel;
-    animation: wheel 10s linear infinite;
+.wheel {
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 55vw;
+  height: 55vw;
+  max-width: 50rem;
+  max-height: 50rem;
+  position: absolute;
+  top: 5%;
+  left: calc((100% - 55vw) / 2);
+  transition: wheel;
+  animation: wheel 10s linear infinite;
 }
-.line{
-    width: 50%;
-    height: 2px;
-    background-color: black;
-    transform-origin: 0% 0%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+.line {
+  width: 50%;
+  height: 2px;
+  background-color: black;
+  transform-origin: 0% 0%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+    animation: line 10s linear infinite;
 }
-.line:nth-of-type(2){
-    transform: rotate(60deg);
+.line:nth-of-type(2) {
+  transform: rotate(60deg);
 }
-.line:nth-of-type(3){
-    transform: rotate(120deg);
+.line:nth-of-type(3) {
+  transform: rotate(120deg);
 }
-.line:nth-of-type(4){
-    transform: rotate(180deg);
+.line:nth-of-type(4) {
+  transform: rotate(180deg);
 }
-.line:nth-of-type(5){
-    transform: rotate(240deg);
+.line:nth-of-type(5) {
+  transform: rotate(240deg);
 }
-.line:nth-of-type(6){
-    transform: rotate(300deg);
+.line:nth-of-type(6) {
+  transform: rotate(300deg);
 }
-.cabin{
-    width: 20%;
-    height: 20%;
-    position: absolute;
-    background-color: red;
-    border: 2px solid;
-    transform-origin: 50% 0%;
-    animation: cabin 10s ease-in-out infinite;
+.cabin {
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  background-color: lightcoral;
+  border: 2px solid;
+  transform-origin: 50% 0%;
+  animation: cabin 10s ease-in-out infinite;
+}
+.door {
+  width: 50%;
+  height: 90%;
+  border: 2px solid;
+  position: absolute;
+  top: 13%;
+  left: 25%;
+  background-color: greenyellow;
+}
+.seprate {
+  width: 0.1rem;
+  height: 100%;
+  border: 1px solid;
+  position: absolute;
+  left: 50%;
 }
 .cabin:nth-of-type(1) {
-    right: -8.5%;
-    top: 50%;
-  }
-  .cabin:nth-of-type(2) {
-    right: 17%;
-    top: 93.5%;
-  }
-  .cabin:nth-of-type(3) {
-    right: 67%;
-    top: 93.5%;
-  }
-  .cabin:nth-of-type(4) {
-    left: -8.5%;
-    top: 50%;
-  }
-  .cabin:nth-of-type(5) {
-    left: 17%;
-    top: 7%;
-  }
-  .cabin:nth-of-type(6) {
-    right: 17%;
-    top: 7%;
-  }
+  right: -8.5%;
+  top: 50%;
+}
+.cabin:nth-of-type(2) {
+  right: 17%;
+  top: 93.5%;
+}
+.cabin:nth-of-type(3) {
+  right: 67%;
+  top: 93.5%;
+}
+.cabin:nth-of-type(4) {
+  left: -8.5%;
+  top: 50%;
+}
+.cabin:nth-of-type(5) {
+  left: 17%;
+  top: 7%;
+}
+.cabin:nth-of-type(6) {
+  right: 17%;
+  top: 7%;
+}
 @keyframes wheel {
-    0%{
-        transform: rotate(0deg);
+  0% {
+    transform: rotate(0deg);
+  }
+  25%{
+    border-color: aqua;
     }
-    100%{
-        transform: rotate(360deg);
+    35%{
+    border-color: rgb(241, 220, 28);
     }
+    50%{
+    border-color: rgb(92, 92, 245);
+    }
+    60%{
+    border-color: rgb(9, 255, 0);
+    }
+    70%{
+    border-color: rgb(255, 0, 0);
+    }
+    80%{
+    border-color: rgb(255, 255, 0);
+    }
+    90%{
+    border-color: rgb(255, 0, 255);
+    }
+  100% {
+    transform: rotate(360deg);
+    border-color: darkorange;
+  }
 }
 @keyframes cabin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: purple;
+  }
+  75% {
+    background-color: rgb(125, 246, 255);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes line {
     0%{
-        transform: rotate(0deg);
+        background-color: cornflowerblue;
     }
-    25% {
-        background-color: yellow;
-      }
-      50% {
-        background-color: purple;
-      }
-    100%{
-        transform: rotate(-360deg);
+    10%{
+        background-color: rgb(4, 0, 255);
+    }
+    20%{
+        background-color: rgb(255, 0, 0);
+    }
+    30%{
+        background-color: rgb(255, 255, 0);
+    }
+    40%{
+        background-color: rgb(255, 0, 255);
+    }
+    50%{
+        background-color: rgb(9, 255, 0);
+    }
+    60%{
+        background-color: rgb(83, 255, 241);
     }
 }
